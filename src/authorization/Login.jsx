@@ -18,7 +18,8 @@ export const Login = () => {
     })
       .then((res) => res.json())
       .then((authInfo) => {
-        if (authInfo.valid) {
+        // checking the object authInfo's key value pairs {token: hasjskdihwnw} not {valid: najduoeksa}
+        if (authInfo.token) {
           localStorage.setItem(
             "readers_digest_token",
             JSON.stringify(authInfo)
