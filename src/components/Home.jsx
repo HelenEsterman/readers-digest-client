@@ -1,3 +1,5 @@
 export const Home = () => {
-  return <>{`Welcome to Reader's Digest`}</>;
+  return (
+    <div className="homePage text-5xl">{`Welcome to Reader's Digest`}</div>
+  );
 };
