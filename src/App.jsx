@@ -4,6 +4,7 @@ import { Login } from "./authorization/Login";
 import { Register } from "./authorization/Register";
 import { Authorized } from "./authorization/Authorized";
 import { Home } from "./components/Home";
+import { AllBooks } from "./components/AllBooks";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route element={<Authorized />}>
         <Route path="/" element={<Home />} />
+        <Route path="/allBooks" element={<AllBooks />} />
       </Route>
     </Routes>
   );
