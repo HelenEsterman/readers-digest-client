@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const AllBooks = () => {
   const [allBooks, setAllBooks] = useState([]);
@@ -24,12 +25,15 @@ export const AllBooks = () => {
       {allBooks.map((book) => {
         return (
           <div key={book.id}>
-            <img
-              src={book.cover_image}
-              alt="Book Cover"
-              width={200}
-              height={4}
-            />
+            <Link to={`/allBooks/${book.id}`}>
+              <img
+                src={book.cover_image}
+                alt="Book Cover"
+                width={200}
+                height={4}
+              />
+            </Link>
+
             <div className="mt-2 text-center italic">{book.title}</div>
           </div>
         );
