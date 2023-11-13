@@ -7,6 +7,7 @@ import { Home } from "./components/Home";
 import { AllBooks } from "./components/AllBooks";
 import { CreateBook } from "./components/CreateBook";
 import { BookWReviews } from "./components/BookWReviews";
+import { ReviewForm } from "./components/ReviewForm";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path=":bookId" element={<BookWReviews />} />
         </Route>
         <Route path="/createBook" element={<CreateBook />} />
+        <Route path="/review" element={<ReviewForm />} />
       </Route>
     </Routes>
   );
