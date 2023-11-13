@@ -69,7 +69,7 @@ export const BookWReviews = () => {
         })}
         <button
           className="review_btn bg-teal-600 border border-teal-600 rounded-md text-black p-2"
-          onClick={() => navigate("/review")}
+          onClick={() => navigate(`/review/${bookId}`)}
         >
           Leave Review
         </button>
