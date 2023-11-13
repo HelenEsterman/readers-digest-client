@@ -5,6 +5,8 @@ import { Register } from "./authorization/Register";
 import { Authorized } from "./authorization/Authorized";
 import { Home } from "./components/Home";
 import { AllBooks } from "./components/AllBooks";
+import { CreateBook } from "./components/CreateBook";
+import { BookWReviews } from "./components/BookWReviews";
 
 function App() {
   return (
@@ -13,7 +15,11 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route element={<Authorized />}>
         <Route path="/" element={<Home />} />
-        <Route path="/allBooks" element={<AllBooks />} />
+        <Route path="/allBooks">
+          <Route index element={<AllBooks />} />
+          <Route path=":bookId" element={<BookWReviews />} />
+        </Route>
+        <Route path="/createBook" element={<CreateBook />} />
       </Route>
     </Routes>
   );
