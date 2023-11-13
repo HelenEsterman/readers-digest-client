@@ -21,7 +21,7 @@ function App() {
           <Route path=":bookId" element={<BookWReviews />} />
         </Route>
         <Route path="/createBook" element={<CreateBook />} />
-        <Route path="/review" element={<ReviewForm />} />
+        <Route path="/review/:bookId" element={<ReviewForm />} />
       </Route>
     </Routes>
   );
